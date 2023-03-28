@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <style>
+
+      .main {
+        display: flex;
+        margin: auto;
+        height: 100vh;
+      }
+
+      .gridwrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, auto));
+        border-radius: 8px;
+        align-items: center;
+        margin: auto;
+        width: 1000px;
+        box-shadow: 4px 4px #f4f7fe;
+        border: 0.5px solid #f4f7fe;
+      }
+
+      .leftwrapper {
+        border-radius: 8px;
+        padding: 34px;
+        background: linear-gradient(
+          0deg,
+          rgba(46, 43, 233, 1) 14%,
+          rgba(120, 87, 255, 1) 100%
+        );
+        text-align: center;
+      }
+
+      .rightwrapper {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        padding: 34px;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      #circle {
+        background: linear-gradient(
+          0deg,
+          rgba(78, 33, 202, 1) 0%,
+          rgba(36, 33, 202, 1) 100%
+        );
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-top: 30px;
+      }
+
+      .circletext {
+        display: block;
+        padding-top: 50px;
+      }
+
+      .summary {
+        font-size: 20px;
+        color: #2f374b;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      #results {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+        height: 20px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+
+      #results > div:last-of-type {
+        margin-left: auto;
+      }
+
+      .continueButton {
+        border-radius: 20px;
+        background: linear-gradient(
+          0deg,
+          rgba(46, 43, 233, 1) 14%,
+          rgba(120, 87, 255, 1) 100%
+        );
+        text-align: center;
+        border: none;
+        padding: 15px;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      .continueButton:hover {
+        background: #303b59;
+        cursor: pointer;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin: 20px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      @media all and (max-width: 375px) {
+        .attribution {
+          display: none;
+        }
+
+        .rightwrapper {
+          margin: 20px;
+          margin-top: 300px;
+          height: 100%;
+        }
+
+        .leftwrapper {
+          margin-top: 50px;
+          height: 100%
+        }
+
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="gridwrapper">
+        <div class="leftwrapper">
+          <span style="color: #f4f5f8; font-size: 20px">Your Result</span>
+
+          <div id="circle">
+            
+            <span class="circletext">
+              <span style="color: #fffffd; font-size: 60px">76</span>
+
+              <br />
+              <span style="color: #95abd1; font-size: 16px">of 100</span>
+            </div>
+  
+            <div style="margin-top: 30px">
+              <span style="color: #fffffd; font-size: 30px">Great</span>
+            </div>
+  
+            <div style="margin-top: 30px">
+              <span style="color: #95abd1"
+                >You scored higher than 65% of the people who have taken these
+                tests.</span
+              >
+            </div>
+          </span>
+            
+        </div>
+
+        <div class="rightwrapper">
+          <div class="summary">Summary</div>
+          <div id="results" style="outline: 1px solid #fff6f5; background: #fff6f5;"> 
+            <span style="color: #dd736e; display: flex; align-items: center;">
+              <img src="./assets/images/icon-reaction.svg" alt="" />
+              Reaction
+            </span> 
+            <div>
+              <span style="color: #232939">80</span>
+              <span style="color: #a39fa0">/ 100</span>
+            </div>
+          </div>
+
+          <div id="results" style="outline: 1px solid #fffbf2; background: #fffbf2;"> 
+            <span style="color: #f1cd78; display: flex; align-items: center;">
+              <img src="./assets/images/icon-memory.svg" alt="" />
+               Memory
+            </span> 
+            <div>
+              <span style="color: #232939">92</span>
+              <span style="color: #a39fa0">/ 100</span>
+            </div>
+          </div>
+
+          <div id="results" style="outline: 1px solid #f2fbfa; background: #f2fbfa;"> 
+            <span style="color: #4baf96; display: flex; align-items: center;">
+              <img src="./assets/images/icon-verbal.svg" alt="" />
+               Verbal
+            </span> 
+            <div>
+              <span style="color: #232939">61</span>
+              <span style="color: #a39fa0">/ 100</span>
+            </div>
+          </div>
+
+          <div id="results" style="outline: 1px solid #f3f3fd; background: #f3f3fd;"> 
+            <span style="color: #535eb5; display: flex; align-items: center;">
+              <img src="./assets/images/icon-visual.svg" alt="" />
+               Visual
+            </span> 
+            <div>
+              <span style="color: #232939">72</span>
+              <span style="color: #a39fa0">/ 100</span>
+            </div>
+          </div>
+
+          <button class="continueButton">Continue</button>
+
+             
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Mansi Manhas</a>.
+    </div>
+  </body>
+</html>
